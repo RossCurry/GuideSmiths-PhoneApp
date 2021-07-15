@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Thumbnail.style.css';
 
 const Thumbnail = ({ data }) => {
   console.log('dataProps', data);
   return ( 
-    // <img src={data.imageFileName} alt="" srcset="" />
-    <div>
-      <h2>thumbnail view{data.name}</h2>
+    <div className="Thumbnail__container">
+      <img src={data.imageFileName} alt={data.description} />
+      <h2>{data.name}</h2>
     </div>
    );
 }

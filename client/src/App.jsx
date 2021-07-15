@@ -7,11 +7,11 @@ import Thumbnail from './components/Thumbnail/Thumbnail.component';
 
 const App = () => {
   const [phoneData, setPhoneData] = useState([]);
-  const phoneDataThumbNails = phoneData.map((data, index) => {
+  const phoneDataThumbNails = phoneData.map((data) => {
     return ( 
-      <li key={data.id}>
+      <>
         <Thumbnail data={data} />
-      </li>
+      </>
     )
   })
   useEffect(async () => {
@@ -22,7 +22,9 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <ul>{phoneDataThumbNails}</ul>
+      <ul className="App__thumbnail-list">
+        {phoneDataThumbNails}
+      </ul>
     </div>
   );
 }

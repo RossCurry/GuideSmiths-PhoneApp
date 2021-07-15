@@ -1,8 +1,9 @@
 import React from 'react';
+// import './Header.style.css';
 
 const Header = () => {
   return (
-    <header className="App-header">
+    <header>
       <nav>
         <menu>burgerMenu</menu>
         <h1>GuideSmiths</h1>
