@@ -10,7 +10,7 @@ const App = () => {
   const phoneDataThumbNails = phoneData.map((data) => {
     return ( 
       <>
-        <Thumbnail data={data} />
+        <Thumbnail key={data.id} data={data} />
       </>
     )
   })

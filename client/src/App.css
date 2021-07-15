@@ -19,5 +19,6 @@ nav {
 .App__thumbnail-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1rem;
+  margin: 0 1rem;
 }

@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 import './Thumbnail.style.css';
 
 const Thumbnail = ({ data }) => {
+  const currency = 'Eur'
   console.log('dataProps', data);
   return ( 
     <div className="Thumbnail__container">
       <img src={data.imageFileName} alt={data.description} />
-      <h2>{data.name}</h2>
+      <div className="Thumbnail__product-info">
+        <span className="Thumbnail__product-name">{data.name}</span>
+        <span className="Thumbnail__product-price">{currency} {data.price}</span>
+        <span className="Thumbnail__product-color">{data.color}</span>
+      </div>
     </div>
    );
 }
