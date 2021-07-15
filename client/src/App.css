@@ -1,7 +1,7 @@
 .App {
     width: 375px;
     /* height: 812px; */
-    display: grid;
+    /* display: grid; */
     justify-self: center;
     align-self: center;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
+import BurgerMenu from '../BurgerMenu/BurgerMenu.component';
 // import './Header.style.css';
 
 const Header = () => {
   return (
     <header>
       <nav>
-        <menu>burgerMenu</menu>
+        <BurgerMenu />
         <h1>GuideSmiths</h1>
         <div>search</div>
       </nav>

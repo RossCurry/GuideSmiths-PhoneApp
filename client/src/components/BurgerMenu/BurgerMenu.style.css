@@ -1,0 +1,43 @@
+:root {
+  --burger-line-height: 8px;
+  --burger-line-width: 30px;
+}
+
+.BurgerMenu__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: var(--burger-line-width);
+  height: calc(var(--burger-line-height) * 3);
+}
+
+.BurgerMenu__line,
+.BurgerMenu__line::after,
+.BurgerMenu__line::before {
+  width: var(--burger-line-width);
+  height: 3px;
+  background-color: rgb(151, 151, 151);
+  pointer-events: none;
+}
+
+
+.BurgerMenu__line {
+  position: relative;
+}
+
+.BurgerMenu__line::after,
+.BurgerMenu__line::before {
+  content: '';
+  position: absolute;
+}
+
+.BurgerMenu__line::before {
+  content: '';
+  left: 0;
+  transform: translateY(calc(var(--burger-line-height) - var(--burger-line-height) * 2));
+}
+.BurgerMenu__line::after {
+  content: '';
+  left: 0;
+  transform: translateY(var(--burger-line-height));
+} 
