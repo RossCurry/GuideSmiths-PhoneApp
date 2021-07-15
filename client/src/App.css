@@ -1,0 +1,15 @@
+.App {
+    width: 375px;
+    height: 812px;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-items: center;
+    align-items: center;
+    min-height: 5vh;
+}
