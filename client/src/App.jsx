@@ -12,7 +12,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { createBrowserHistory } from "history"
+import { createBrowserHistory } from "history";
 import ProductDetail from './components/ProductDetail/ProductDetail.component';
 
 const App = () => {
