@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './ProductDetail.style.css';
 import { Link, useHistory } from 'react-router-dom';
 
 const ProductDetail = ({ product }) => {
+  const [isVisible, setIsVisible] = useState('none');
   const history = useHistory();
   const currency = 'EUR';
-  return ( 
+  return (
     <main className="ProductDetail__container">
       <aside><Link onClick={() => history.goBack()}>Browse</Link> {">"} {product.name}</aside>
       <img src={product.imageFileName} alt={product.description} />
@@ -19,8 +20,21 @@ const ProductDetail = ({ product }) => {
         <span className="ProductDetail__info-price">{currency} {product.price}</span>
       </span>
       <div className="ProductDetail__callToAction">
-        <button type="button" className="info-button">+ info</button>
+        <button type="button" className="info-button" onClick={() => setIsVisible('grid')}>+ info</button>
         <button type="button" className="buy-button"> buy</button>
+      </div>
+      <div className="ProductDetail__modal" style={{display: isVisible}}>
+        <div className="ProductDetail__modal-info">
+          <button type="button" className="modal-button" onClick={() => setIsVisible('none')}>
+            <div className="modal-button__line"></div>
+          </button>
+          <span className="modal-info">manufacturer: {' '} {product.manufacturer}</span>
+          <span className="modal-info">name: {' '} {product.name}</span>
+          <span className="modal-info">description: {' '} {product.description}</span>
+          <span className="modal-info">screen: {' '} {product.screen}</span>
+          <span className="modal-info">processor: {' '} {product.processor}</span>
+          <span className="modal-info">ram: {' '} {product.ram}</span>
+        </div>
       </div>
     </main>
    );

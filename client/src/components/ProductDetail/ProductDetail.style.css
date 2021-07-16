@@ -11,6 +11,7 @@
   display: grid;
   grid-template-rows: 10% 60% 5% 5% 20%;
   justify-content: center;
+  position: relative;
 }
 
 .ProductDetail__container img {
@@ -91,4 +92,96 @@
   border: 1px solid var(--button-color-action);
   background: var(--button-color-action);
   color: white;
+}
+
+.ProductDetail__modal {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  z-index: 1;
+  background: rgba(92, 92, 92, 0.644);
+  animation: fadeInModal 300ms ease-in-out;
+}
+
+.ProductDetail__modal-info {
+  background: white;
+  width: 90%;
+  height: 70vh;
+  justify-self: center;
+  margin: 6rem 0 0 0;
+  display: grid;
+  grid-auto-flow: row;
+  padding: 4em 2em 2em 2em;
+  text-transform: capitalize;
+  position: relative;
+  opacity: 0;
+  animation: fadeInModalInfo 300ms ease-in-out 150ms forwards;
+}
+
+.ProductDetail__modal .modal-button {
+  position: absolute;
+  top: calc(-2rem - 20px);
+  right: 0;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: grid;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInModalInfo 400ms ease-in-out 350ms forwards;
+}
+
+.ProductDetail__modal .modal-button:hover,
+.ProductDetail__modal .modal-button:focus {
+  background-color: var(--button-color-action);
+}
+ 
+.modal-button__line,
+.modal-button__line::after {
+  width: 30px;
+  height: 3px;
+  background-color: grey;
+  justify-self: center;
+  align-self: center;
+  transform: rotate(45deg);
+  position: relative;
+}
+.modal-button__line::after {
+  content: '';
+  position: absolute;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 50%;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInModalInfo {
+  from {
+    opacity: 0%;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeOutModal {
+  from {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0%;
+    transform: translateY(100%);
+  }
 }
