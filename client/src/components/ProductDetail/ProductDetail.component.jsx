@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './ProductDetail.style.css';
 import { Link, useHistory } from 'react-router-dom';
@@ -7,6 +7,9 @@ const ProductDetail = ({ product }) => {
   const [isVisible, setIsVisible] = useState('none');
   const history = useHistory();
   const currency = 'EUR';
+  useEffect(() => {
+    if (!product.name) history.push('/') 
+  }, [product])
   return (
     <main className="ProductDetail__container">
       <aside><Link onClick={() => history.goBack()}>Browse</Link> {">"} {product.name}</aside>
