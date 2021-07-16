@@ -6,9 +6,14 @@ import { Link, useHistory } from 'react-router-dom';
 const ProductDetail = ({ product }) => {
   const history = useHistory();
   return ( 
-    <main>
+    <main className="ProductDetail__container">
       <aside><Link onClick={() => history.goBack()}>Browse</Link> {">"} {product.name}</aside>
       <img src={product.imageFileName} alt={product.description} />
+      <span className="ProductDetail__color">{product.color}</span>
+      <span className="ProductDetail__info">{product.name} {product.price}</span>
+      <div className="ProductDetail__callToAction">
+        call to action
+      </div>
     </main>
    );
 }

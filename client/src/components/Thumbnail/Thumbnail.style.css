@@ -1,8 +1,15 @@
 .Thumbnail__container {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-rows: 70% 30%;
   /* background-color: bisque; */
+  cursor: pointer;
+}
+
+.Thumbnail__container:hover{
+  box-shadow: 0 0 15px 1px rgb(151, 151, 151);
+  transform: scale(1.02);
 }
 
 .Thumbnail__container img {

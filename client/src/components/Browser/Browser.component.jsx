@@ -1,4 +1,5 @@
 import React from 'react';
+import './Browser.style.css';
 import Spinner from '../Spinner/Spinner.component';
 import PropTypes from 'prop-types';
 
@@ -6,7 +7,7 @@ const Browser = ({ phoneData, phoneDataThumbNails }) => {
   return ( 
     <div className="Browser__container">
       {phoneData.length === 0 ? <Spinner /> : null}
-      <ul className="App__thumbnail-list">
+      <ul className="Browser__thumbnail-list">
           {phoneData.length > 0 ? phoneDataThumbNails : null}
       </ul>
     </div>

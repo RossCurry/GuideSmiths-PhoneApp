@@ -7,7 +7,9 @@ const Header = () => {
     <header>
       <nav>
         <BurgerMenu />
-        <h1>GuideSmiths</h1>
+        <a href="/">
+          <h1>GuideSmiths</h1>
+        </a>
         <div>search</div>
       </nav>
     </header>

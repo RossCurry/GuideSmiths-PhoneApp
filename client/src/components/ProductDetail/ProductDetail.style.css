@@ -1,0 +1,8 @@
+.ProductDetail__container {
+  display: grid;
+  grid-template-rows: 10% 40% 10% 10% 10%;
+}
+
+.ProductDetail__container img {
+  width: 300px;
+}
