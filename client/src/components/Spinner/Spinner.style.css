@@ -1,5 +1,6 @@
 .Spinner-container {
   display: grid;
+  grid-template-rows: 80% 20%;
   justify-content: center;
   align-items: center;
   height: 50vh;
@@ -8,20 +9,21 @@
 .Spinner__loading {
   width: 100px;
   height: 100px;
-  border-bottom: 5px black dashed;
-  border-top: 1px black dashed;
+  /* border-bottom: 5px black dashed; */
   border-radius: 50%;
-  /* border-bottom:black;
+  border-bottom:black;
   border-width: 5px;
-  border-style: groove; */
+  border-style: groove;
   position: relative;
   z-index: 0;
   transform-origin: center;
   animation: reverseRotate 2000ms linear infinite;
+  justify-self: center;
+  align-self: center;
   /* overflow: hidden; */
 }
 
-/* .Spinner__loading::after {
+.Spinner__loading::after {
   position: absolute;
   content: '';
   background: rgb(255, 255, 255);
@@ -33,7 +35,18 @@
   transform: translate(-25%, -40%);
   animation: spinnerRotate 1000ms ease-in-out infinite;
   z-index: 1;
-} */
+}
+
+.Spinner__text {
+  opacity: 100%;
+  animation: fadeIn 300ms ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+}
 
 .Spinner-container .hidden {
   /* overflow: hidden; */

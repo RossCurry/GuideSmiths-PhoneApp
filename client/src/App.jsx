@@ -18,15 +18,17 @@ const App = () => {
   useEffect(async () => {
     // call api & set data
     const phoneData = await fetchAllPhoneData();
-    setPhoneData(phoneData);
+    setTimeout(() => {
+      setPhoneData(phoneData);
+    }, 1000);
   }, []);
   return (
     <div className="App">
       <Header />
-      {/* <ul className="App__thumbnail-list">
-        {phoneDataThumbNails}
-      </ul> */}
-      <Spinner />
+      {phoneData.length === 0 ? <Spinner /> : null}
+      <ul className="App__thumbnail-list">
+        {phoneData.length > 0 ? phoneDataThumbNails : null}
+      </ul>
     </div>
   );
 }
