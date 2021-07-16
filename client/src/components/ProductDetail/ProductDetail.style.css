@@ -1,8 +1,94 @@
+:root {
+  --color-tab-width: 25px;
+  --button-color: rgb(50, 50, 50);
+  --button-color-light: rgb(139, 138, 138);
+  --button-color-action: rgb(212, 78, 78);
+}
+ 
 .ProductDetail__container {
+  height: 80vh;
+  width: 100%;
   display: grid;
-  grid-template-rows: 10% 40% 10% 10% 10%;
+  grid-template-rows: 10% 60% 5% 5% 20%;
+  justify-content: center;
 }
 
 .ProductDetail__container img {
   width: 300px;
+}
+
+.ProductDetail__color-info,
+.ProductDetail__info {
+ padding: 0 1rem 0 1rem;
+}
+
+
+.ProductDetail__color-info,
+.ProductDetail__info {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.ProductDetail__color,
+.ProductDetail__info-name {
+  justify-self: start;
+}
+
+.ProductDetail__color-tab,
+.ProductDetail__info-price {
+  justify-self: end;
+}
+.ProductDetail__color-tab {
+  width: var(--color-tab-width);
+  height: var(--color-tab-width);
+}
+.ProductDetail__info-price {
+  display: inline;
+}
+
+.ProductDetail__callToAction {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 1rem 0;
+}
+
+.ProductDetail__callToAction .info-button,
+.ProductDetail__callToAction .buy-button {
+  width: 90%;
+  justify-self: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  /* padding: 0em 1em; */
+  border: none;
+  background: chocolate;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.ProductDetail__callToAction .info-button {
+  border: 1px solid var(--button-color);
+  background: white;
+  color: var(--button-color);
+}
+
+.ProductDetail__callToAction .info-button:hover,
+.ProductDetail__callToAction .info-button:focus {
+  border: 1px solid var(--button-color-light);
+  background: var(--button-color-light);
+  color: white;
+}
+
+.ProductDetail__callToAction .buy-button {
+  border: 1px solid var(--button-color);
+  background: var(--button-color);
+  color: white;
+}
+.ProductDetail__callToAction .buy-button:hover,
+.ProductDetail__callToAction .buy-button:focus {
+  border: 1px solid var(--button-color-action);
+  background: var(--button-color-action);
+  color: white;
 }
