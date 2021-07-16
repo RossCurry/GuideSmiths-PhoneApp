@@ -4,6 +4,7 @@ import Header from './components/Header/Header.components';
 import './App.css';
 import { fetchAllPhoneData } from './apiService';
 import Thumbnail from './components/Thumbnail/Thumbnail.component';
+import Spinner from './components/Spinner/Spinner.component';
 
 const App = () => {
   const [phoneData, setPhoneData] = useState([]);
@@ -22,9 +23,10 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <ul className="App__thumbnail-list">
+      {/* <ul className="App__thumbnail-list">
         {phoneDataThumbNails}
-      </ul>
+      </ul> */}
+      <Spinner />
     </div>
   );
 }
