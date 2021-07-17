@@ -23,7 +23,7 @@ const updatePhoneinDatabase = async (id, body) => {
   try {
     await Mobile.sync({alter: true});
     const returnData = await Mobile.update(body, {where: {id}});
-    return returnData;
+    if (returnData[0] === 1)return await Mobile.findByPk(id);
   } catch (error) {
     console.error(`error updating mobile with id: ${id}`, error);
   }

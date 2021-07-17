@@ -34,6 +34,9 @@ const Mobile = sequelize.define('mobile', {
   ram: {
     type: Sequelize.INTEGER
   }
-});
+},{
+  returning: true
+}
+);
 
 module.exports = { Mobile };
