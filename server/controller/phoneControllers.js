@@ -1,17 +1,18 @@
-const phoneData = require('./mockPhoneData.json');
-const { addOneMobileToDB } = require('../models/mobile.model');
+// const phoneData = require('./mockPhoneData.json');
+const { addOneMobileToDB, fetchAllPhoneData } = require('../models/mobile.model');
 
-const getPhoneData = (req, res) => {
+const getPhoneData = async (req, res) => {
     // res.send('Hello World! using controller')
-    res.send(phoneData);
+    const returnPhoneData = await fetchAllPhoneData();
+    res.send(returnPhoneData).status(200);
 }
 
 const addPhoneData = async (req, res) => {
   const { body } = req;
   const returnData = await addOneMobileToDB(body);
-  console.log('returnData Controller', returnData);
-  res.send({message: "success"})
+  res.send(returnData)
+  res.status(200);
+  // res.send({message: "success"})
 }
-
 
 module.exports = { getPhoneData, addPhoneData };

@@ -37,12 +37,3 @@ const Mobile = sequelize.define('mobile', {
 });
 
 module.exports = { Mobile };
-
-// // force: true will drop the table if it already exists
-// Mobile.sync({force: true}).then(() => {
-//   // Table created
-//   return Mobile.create({
-//     firstName: 'John',
-//     lastName: 'Hancock'
-//   });
-// });
