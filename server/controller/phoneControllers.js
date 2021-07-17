@@ -1,4 +1,4 @@
-const { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase } = require('../models/mobile.model');
+const { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase, deletePhoneinDatabase } = require('../models/mobile.model');
 
 const getPhoneData = async (req, res) => {
   try {
@@ -24,12 +24,22 @@ const updatePhoneData = async (req, res) => {
   try {
     const { body } = req;
     const { id } = req.params;
-    console.log('body & id', body, id);
     const returnData = await updatePhoneinDatabase(id, body);
-    res.send({message: "all good in the hood", returnData})
+    res.send({message: "data updated", returnData}).status(201);
   } catch (error) {
     res.send({message: "error updating phone data", error}).status(500)
   }
 }
 
-module.exports = { getPhoneData, addPhoneData, updatePhoneData };
+const deletePhoneData = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedMobile = await deletePhoneinDatabase(id);
+    if (deletedMobile) res.send({message: "mobile deleted", deletedMobile}).status(201);
+    else throw new Error("phone does not exist on database");
+  } catch (error) {
+    res.send({message: "error deleting phone data", error}).status(500);
+  }
+}
+
+module.exports = { getPhoneData, addPhoneData, updatePhoneData, deletePhoneData };

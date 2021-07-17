@@ -23,10 +23,32 @@ const updatePhoneinDatabase = async (id, body) => {
   try {
     await Mobile.sync({alter: true});
     const returnData = await Mobile.update(body, {where: {id}});
-    if (returnData[0] === 1)return await Mobile.findByPk(id);
+    if (returnData[0] === 1) return await queryById(id);
   } catch (error) {
     console.error(`error updating mobile with id: ${id}`, error);
   }
 }
 
-module.exports = { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase };
+const deletePhoneinDatabase = async (id) => {
+  try {
+    const phoneToDelete = await queryById(id);
+    if (phoneToDelete) {
+      const returnData = await Mobile.destroy({where: {id}});
+      if (returnData[0] === 1) return {deletedMobile: phoneToDelete};
+    } else {
+      throw new Error ({message: "phone does not exist on database"})
+    }
+  } catch (error) {
+    console.error(`error deleting mobile with id: ${id}`, error);
+  }
+}
+
+const queryById = async (id) => {
+  try {
+    return await  Mobile.findByPk(id);
+  } catch (error) {
+    console.error(`error finding mobile with id: ${id}`, error);
+  }
+}
+
+module.exports = { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase, deletePhoneinDatabase };
