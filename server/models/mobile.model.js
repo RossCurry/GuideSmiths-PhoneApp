@@ -15,8 +15,18 @@ const addOneMobileToDB = async (mobileData) => {
     const returnData = await Mobile.create(mobileData);
     return returnData;
   } catch (error) {
-    console.error('error addding one new mobile', error);
+    console.error('error adding one new mobile', error);
   }
 }
 
-module.exports = { addOneMobileToDB, fetchAllPhoneData };
+const updatePhoneinDatabase = async (id, body) => {
+  try {
+    await Mobile.sync({alter: true});
+    const returnData = await Mobile.update(body, {where: {id}});
+    return returnData;
+  } catch (error) {
+    console.error(`error updating mobile with id: ${id}`, error);
+  }
+}
+
+module.exports = { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase };

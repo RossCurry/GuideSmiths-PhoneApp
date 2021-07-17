@@ -1,4 +1,4 @@
-const { addOneMobileToDB, fetchAllPhoneData } = require('../models/mobile.model');
+const { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase } = require('../models/mobile.model');
 
 const getPhoneData = async (req, res) => {
   try {
@@ -20,4 +20,16 @@ const addPhoneData = async (req, res) => {
   }
 }
 
-module.exports = { getPhoneData, addPhoneData };
+const updatePhoneData = async (req, res) => {
+  try {
+    const { body } = req;
+    const { id } = req.params;
+    console.log('body & id', body, id);
+    const returnData = await updatePhoneinDatabase(id, body);
+    res.send({message: "all good in the hood", returnData})
+  } catch (error) {
+    res.send({message: "error updating phone data", error}).status(500)
+  }
+}
+
+module.exports = { getPhoneData, addPhoneData, updatePhoneData };
