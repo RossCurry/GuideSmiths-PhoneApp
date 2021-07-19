@@ -19,7 +19,7 @@ import ProductDetail from './components/ProductDetail/ProductDetail.component';
 const App = () => {
   const [phoneData, setPhoneData] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState({});
-  const [menuModel, setMenuModal] = useState('');
+  const [menuModelAnimation, setMenuModalAnimation] = useState('');
   const history = createBrowserHistory();
   const phoneDataThumbNails = phoneData.map((data) => {
     const handleClick = () => {
@@ -31,12 +31,19 @@ const App = () => {
       </Link>
     )
   })
-  const menuModalAnimation = {
-    slideIn: "menuSlideIn 300ms ease-in forward",
-    slideOut: "menuSlideOut 300ms ease-in forward"
+  const menuAnimation = {
+    slideIn: "menuSlideIn 200ms ease-in forwards",
+    slideOut: "menuSlideOut 200ms ease-in forwards"
   }
   const handleBurgerMenu = () => {
-    console.log('burgermenu in APP');
+    // toggle animation
+    if (!menuModelAnimation) {
+      setMenuModalAnimation(menuAnimation.slideIn);
+    } else if (menuModelAnimation === menuAnimation.slideIn) {
+      setMenuModalAnimation(menuAnimation.slideOut);
+    } else {
+      setMenuModalAnimation(menuAnimation.slideIn);
+    }
   }
   useEffect(async () => {
     // call api & set data
@@ -49,10 +56,10 @@ const App = () => {
     <Router history={history}>
       <main className="App">
         <Header handleBurgerMenu={handleBurgerMenu}/>
+        <MenuModal menuAnimation={menuModelAnimation} />
         <Switch>
           <Route exact path="/">
             <Browser phoneData={phoneData} phoneDataThumbNails={phoneDataThumbNails} />
-            <MenuModal menuAnimation={menuModel} />
           </Route>
           <Route exact path="/mobile/:brand/:id">
             <ProductDetail product={selectedProduct} />
