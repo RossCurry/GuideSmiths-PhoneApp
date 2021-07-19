@@ -4,7 +4,6 @@ import Header from './components/Header/Header.components';
 import './App.css';
 import { fetchAllPhoneData } from './apiService';
 import Thumbnail from './components/Thumbnail/Thumbnail.component';
-import Spinner from './components/Spinner/Spinner.component';
 import Browser from './components/Browser/Browser.component';
 import MenuModal from './components/MenuModal/MenuModal.component';
 import CreateProduct from './components/CreateProduct/CreateProduct.component';

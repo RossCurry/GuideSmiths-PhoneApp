@@ -1,13 +1,14 @@
-.MenuModal__hidden {
+/* .MenuModal__hidden {
   overflow: hidden;
   background-color: tomato;
   width: 100%;
-}
+} */
 
 .MenuModal__container {
   position: absolute;
   top: var(--header-height);
-  width: 375px;
+  left: 0;
+  width: 100vw;
   z-index: 1;
   height: calc(100% - var(--header-height));
   background-color: rgb(110, 110, 110);
@@ -62,5 +63,11 @@
   to {
     transform: translateX(-100);
     opacity: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .MenuModal__container {
+    width: 50vw;
   }
 }
