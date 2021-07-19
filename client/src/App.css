@@ -1,9 +1,13 @@
 .App {
-    width: 375px;
-    /* height: 812px; */
     display: grid;
     justify-self: center;
     align-self: center;
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    
+  .App {
+    justify-self: normal;
+  }
+}

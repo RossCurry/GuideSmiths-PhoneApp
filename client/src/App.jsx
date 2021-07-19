@@ -61,7 +61,7 @@ const App = () => {
     <Router history={history}>
       <main className="App">
         <Header handleBurgerMenu={handleBurgerMenu} isMenu={isMenu}/>
-        <MenuModal menuAnimation={menuModelAnimation} handleBurgerMenu={handleBurgerMenu}/>
+        <MenuModal menuAnimation={menuModelAnimation} handleBurgerMenu={handleBurgerMenu} isMenu={isMenu}/>
         <Switch>
           <Route exact path="/">
             <Browser phoneData={phoneData} phoneDataThumbNails={phoneDataThumbNails} setPhoneData={setPhoneData} />

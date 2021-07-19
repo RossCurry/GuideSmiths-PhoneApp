@@ -14,3 +14,10 @@ nav {
   align-items: center;
   padding: 1em 0 1rem 0;
 }
+
+@media (min-width: 786px) {
+  nav {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+  }
+}

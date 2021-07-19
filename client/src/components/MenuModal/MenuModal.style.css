@@ -1,3 +1,9 @@
+.MenuModal__hidden {
+  overflow: hidden;
+  background-color: tomato;
+  width: 100%;
+}
+
 .MenuModal__container {
   position: absolute;
   top: var(--header-height);
@@ -27,6 +33,14 @@
 }
 .Menu-item__title {
   margin: 0 0 0 4rem;
+}
+
+.display-off {
+  display: none;
+}
+
+.display-grid {
+  display: grid;
 }
 
 @keyframes menuSlideIn {

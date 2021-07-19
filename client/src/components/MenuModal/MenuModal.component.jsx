@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './MenuModal.style.css';
 import PropType from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,13 +15,25 @@ const MenuItem = ({ title, route, handleBurgerMenu }) => {
 }
 
 
-const MenuModal = ({ menuAnimation, handleBurgerMenu }) => {
+const MenuModal = ({ menuAnimation, handleBurgerMenu, isMenu }) => {
+  const [menuClass, setMenuClass] = useState('MenuModal__container display-off');
+  useEffect(()=> {
+    if (isMenu) {
+      setMenuClass('MenuModal__container display-grid');
+    } else {
+      setTimeout(() => {
+        setMenuClass('MenuModal__container display-off')
+      }, 300);
+    }
+  }, [isMenu])
   return (
-    <menu className="MenuModal__container" style={{animation: menuAnimation}}>
-      <MenuItem title="Add New Model" route="/mobile/new" handleBurgerMenu={handleBurgerMenu} />
-      <MenuItem title="Edit Model" route="/mobile/edit" handleBurgerMenu={handleBurgerMenu} />
-      <MenuItem title="Favourites" route="/mobile/favorites" handleBurgerMenu={handleBurgerMenu} />
-    </menu>
+    <span className="MenuModal__hidden">
+      <menu className={menuClass} style={{animation: menuAnimation}}>
+        <MenuItem title="Add New Model" route="/mobile/new" handleBurgerMenu={handleBurgerMenu} />
+        <MenuItem title="Edit Model" route="/mobile/edit" handleBurgerMenu={handleBurgerMenu} />
+        <MenuItem title="Favourites" route="/mobile/favorites" handleBurgerMenu={handleBurgerMenu} />
+      </menu>
+    </span>
   );
 }
 
@@ -33,7 +45,8 @@ MenuItem.propTypes = {
 
 MenuModal.propTypes = {
   menuAnimation: PropType.string,
-  handleBurgerMenu: PropType.func
+  handleBurgerMenu: PropType.func,
+  isMenu: PropType.bool
 }
 
 export default MenuModal;

@@ -11,10 +11,11 @@
 form label,
 form label input[type="text"],
 form label input[type="number"],
-form button {
-  width: 98%;
+form button[type="submit"] {
+  width: 100%;
   margin: .125rem auto;
   text-transform: capitalize;
+  padding: 0 1rem;
 }
 
 form label input[type="text"],
@@ -34,6 +35,7 @@ form button {
   border: 1px solid var(--button-color);
   background: var(--button-color);
   color: white;
+  margin-top: 1rem;
 }
 form button:hover,
 form button:focus {
