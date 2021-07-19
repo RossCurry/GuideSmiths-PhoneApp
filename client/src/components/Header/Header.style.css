@@ -1,0 +1,16 @@
+:root {
+  --header-height: 10vh;
+}
+
+header {
+  height: var(--header-height);
+  margin: 0 0 2rem 0;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  justify-items: center;
+  align-items: center;
+  padding: 1em 0 1rem 0;
+}

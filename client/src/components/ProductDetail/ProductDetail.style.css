@@ -1,6 +1,7 @@
 :root {
   --color-tab-width: 25px;
   --button-color: rgb(50, 50, 50);
+  --text-color-dark: rgb(50, 50, 50);
   --button-color-light: rgb(139, 138, 138);
   --button-color-action: rgb(212, 78, 78);
 }
