@@ -34,7 +34,10 @@ const updatePhoneData = async (req, res) => {
 const deletePhoneData = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log('url', req.params);
+    console.log('id', id);
     const deletedMobile = await deletePhoneinDatabase(id);
+    console.log('deletedMobile', deletedMobile);
     if (deletedMobile) res.send({message: "mobile deleted", deletedMobile}).status(201);
     else throw new Error("phone does not exist on database");
   } catch (error) {

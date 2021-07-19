@@ -6,4 +6,5 @@ router.post('/mobile/create', addPhoneData);
 router.put('/mobile/update/:id', updatePhoneData);
 router.delete('/mobile/delete/:id', deletePhoneData);
 
+
 module.exports = router;

@@ -23,7 +23,7 @@ const updatePhoneinDatabase = async (id, body) => {
   try {
     await Mobile.sync({alter: true});
     const returnData = await Mobile.update(body, {where: {id}});
-    if (returnData[0] === 1) return await queryById(id);
+    if (returnData === 1) return await queryById(id);
   } catch (error) {
     console.error(`error updating mobile with id: ${id}`, error);
   }
@@ -34,7 +34,7 @@ const deletePhoneinDatabase = async (id) => {
     const phoneToDelete = await queryById(id);
     if (phoneToDelete) {
       const returnData = await Mobile.destroy({where: {id}});
-      if (returnData[0] === 1) return {deletedMobile: phoneToDelete};
+      if (returnData === 1) return phoneToDelete.dataValues;
     } else {
       throw new Error ({message: "phone does not exist on database"})
     }
