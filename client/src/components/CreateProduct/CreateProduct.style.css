@@ -1,0 +1,47 @@
+.CreateProduct__container {
+  display: grid;
+  justify-content: center;
+}
+
+.CreateProduct__container form {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+form label,
+form label input[type="text"],
+form label input[type="number"],
+form button {
+  width: 98%;
+  margin: .125rem auto;
+  text-transform: capitalize;
+}
+
+form label input[type="text"],
+form label input[type="number"] {
+  padding: .5rem;
+  font-size: 1.1rem;
+}
+
+form button {
+  justify-self: center;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  height: 3rem;
+  cursor: pointer;
+  border: 1px solid var(--button-color);
+  background: var(--button-color);
+  color: white;
+}
+form button:hover,
+form button:focus {
+  border: 1px solid var(--button-color-action);
+  background: var(--button-color-action);
+  color: white;
+}
+
+.borderWarning {
+  border: 2px solid #D34E4E;
+}
