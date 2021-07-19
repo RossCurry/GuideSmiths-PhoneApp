@@ -1,9 +1,8 @@
+/* eslint-disable no-undef */
 const Sequelize = require('sequelize');
-// TODO replace with ENV variables
-const sequelize = new Sequelize('guidesmithdb', 'rosscurry', 'Abc123', {
+const sequelize = new Sequelize(`${process.env.DB_NAME}`, `${process.env.DB_USERNAME}`, `${process.env.DB_PASSWORD}`, {
   host: 'localhost',
   dialect: 'postgres',
-  operatorsAliases: false,
 
   pool: {
     max: 5,
