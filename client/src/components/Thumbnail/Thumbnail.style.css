@@ -1,18 +1,41 @@
+:root {
+  --guidesmith-purple: rgb(193, 47, 137);
+  --guidesmith-purple-light: hsla(323, 20%, 47%, 0.479);
+}
+
 .Thumbnail__container {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-rows: 70% 30%;
   cursor: pointer;
+  position: relative;
 }
 
-.Thumbnail__container:hover{
-  box-shadow: 0 0 15px 1px rgb(151, 151, 151);
-  transform: scale(1.02);
+.Thumbnail__container::after {
+  position: absolute;
+  content: '';
+  bottom: 10px;
+  left:50%;
+  right: 50%;
+  width: 0px;
+  height: 10px;
+  background-color: var(--guidesmith-purple);
+  transition: 
+    left 150ms ease-in-out,
+    right 150ms ease-in-out,
+    width 150ms ease-in-out;
+  overflow: hidden;
+}
+
+.Thumbnail__container:hover::after {
+  left: 0%;
+  right: 0%;
+  width: 250px;
 }
 
 .Thumbnail__container img {
-  width: 100%;
+  max-width: 100%;
   max-height: 100%;
   padding: .5em;
 }

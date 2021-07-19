@@ -17,19 +17,28 @@ const initialValue = {
 
 const CreateProduct = () => {
   const [value, setValue] = useState(initialValue);
+  const [areAllFields, setAreAllFields] = useState(false);
   const history = useHistory();
   const handleChange = (e) => {
     const targetName = e.target.name;
     const newValue = e.target.value;
     setValue({...value, [targetName]: newValue});
   }
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const checkAllValues = () => {
     for (let el in value) {
-      if (value[el] == 0 || value[el] === '') {
-        return;
+      if (value[el] === 0 || value[el] === '') {
+        return false;
       }
     }
+    return true;
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!checkAllValues()) {
+      setAreAllFields(false);
+      return;
+    }
+    setAreAllFields(true); 
     const { id } = await createPhoneInstance(value);
     if (id) {
       setValue(initialValue);
@@ -38,7 +47,7 @@ const CreateProduct = () => {
   }
   return ( 
     <div className="CreateProduct__container">
-      <p>All fields are required</p>
+      <p>{areAllFields ? "All fields are required" : "The fields in red are required"}</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">name
           <input 

@@ -2,7 +2,6 @@
     display: grid;
     justify-self: center;
     align-self: center;
-    overflow: hidden;
 }
 
 @media (min-width: 768px) {

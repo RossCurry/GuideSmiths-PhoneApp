@@ -32,5 +32,20 @@ export const createPhoneInstance = async (phoneData) => {
   });
 }
 
-// router.put('/mobile/update/:id', updatePhoneData);
+
 // router.delete('/mobile/delete/:id', deletePhoneData);
+export const deletePhoneInstance = async (id) => {
+  const strId = id + '';
+  const endpoint = `/mobile/delete/${strId}`; 
+  return fetch(BASE_URL+endpoint, {
+    method: 'DELETE',
+    mode: 'cors',
+    credentials: 'include',
+  })
+  .then(res => res.json())
+  .then(data => {
+    return data;
+  });
+}
+
+// router.put('/mobile/update/:id', updatePhoneData);

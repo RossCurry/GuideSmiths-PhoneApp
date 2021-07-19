@@ -2,11 +2,18 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import './ProductDetail.style.css';
 import { Link, useHistory } from 'react-router-dom';
+import { deletePhoneInstance } from '../../apiService';
 
 const ProductDetail = ({ product }) => {
   const [isVisible, setIsVisible] = useState('none');
   const history = useHistory();
   const currency = 'EUR';
+  const handleDelete = async () => {
+    const deletedPhone = await deletePhoneInstance(product.id);
+    console.log('deletedPhone', deletedPhone);
+    history.push('/');
+
+  }
   useEffect(() => {
     if (!product.name) history.push('/') 
   }, [product])
@@ -37,6 +44,7 @@ const ProductDetail = ({ product }) => {
           <span className="modal-info">screen: {' '} {product.screen}</span>
           <span className="modal-info">processor: {' '} {product.processor}</span>
           <span className="modal-info">ram: {' '} {product.ram}</span>
+          <button type="button" id="delete-product" onClick={handleDelete}>Delete Product</button>
         </div>
       </div>
     </main>
