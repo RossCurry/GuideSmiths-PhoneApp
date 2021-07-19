@@ -38,6 +38,7 @@ const CreateProduct = () => {
   }
   return ( 
     <div className="CreateProduct__container">
+      <p>All fields are required</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">name
           <input 
