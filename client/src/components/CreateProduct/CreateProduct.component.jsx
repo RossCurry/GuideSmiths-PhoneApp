@@ -31,7 +31,6 @@ const CreateProduct = () => {
       }
     }
     const { id } = await createPhoneInstance(value);
-    console.log('return id is ', id);
     if (id) {
       setValue(initialValue);
       history.push('/');

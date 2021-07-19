@@ -3,12 +3,6 @@ import './BurgerMenu.style.css';
 import { PropTypes } from 'prop-types';
 
 const BurgerMenu = ({ handleBurgerMenu, isMenu }) => {
-  // const [burgerMenuStyle, setBurgerMenuStyle] = useState({});
-  // const changeStyle = {
-  //   open: {transform: "rotate(90deg)"},
-  //   close: {transform: "rotate(90deg)"}
-  // }
-  // const [isMenu, setIsMenu] = useState(false);
   const topRotate = isMenu ? {transform: "rotate(45deg)", top: "0"} : {transform: "rotate(0)"};
   const bottomRotate = isMenu ? {transform: "rotate(-45deg)", top: "0" } : {transform: "rotate(0)"};
   const bgColor = isMenu ? {backgroundColor: "transparent"} : {backgroundColor: "rgb(151, 151, 151)"};

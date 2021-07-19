@@ -4,7 +4,6 @@ import './Thumbnail.style.css';
 
 const Thumbnail = ({ data }) => {
   const currency = 'Eur'
-  console.log('dataProps', data);
   return ( 
     <div className="Thumbnail__container">
       <img src={data.imageFileName} alt={data.description} />

@@ -10,14 +10,12 @@ export const fetchAllPhoneData = async () => {
   })
   .then(res => res.json())
   .then(data => {
-    console.log('fetched data', data);
     return data;
   });
 }
 
 // router.post('/mobile/create', addPhoneData);
 export const createPhoneInstance = async (phoneData) => {
-  console.log('phoneData', phoneData);
   const endpoint = '/mobile/create';
   return fetch(BASE_URL+endpoint, {
     method: 'POST',
@@ -30,7 +28,6 @@ export const createPhoneInstance = async (phoneData) => {
   })
   .then(res => res.json())
   .then(data => {
-    console.log('createPhoneInstance return data', data);
     return data;
   });
 }

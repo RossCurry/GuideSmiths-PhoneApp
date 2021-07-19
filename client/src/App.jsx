@@ -51,7 +51,6 @@ const App = () => {
     }
   }
   useEffect(async () => {
-    // call api & set data
     const phoneData = await fetchAllPhoneData();
     setTimeout(() => {
       setPhoneData(phoneData);
