@@ -7,9 +7,7 @@ import { fetchAllPhoneData } from '../../apiService';
 const Browser = ({ phoneData, phoneDataThumbNails, setPhoneData }) => {
   useEffect(async () => {
     const fetchedData = await fetchAllPhoneData();
-    setTimeout(() => {
-      setPhoneData(fetchedData);
-    }, 1000);
+    setPhoneData(fetchedData);
   }, []);
   return ( 
     <div className="Browser__container">

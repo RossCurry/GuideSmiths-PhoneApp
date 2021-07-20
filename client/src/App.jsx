@@ -51,9 +51,7 @@ const App = () => {
   }
   useEffect(async () => {
     const phoneData = await fetchAllPhoneData();
-    setTimeout(() => {
-      setPhoneData(phoneData);
-    }, 1000);
+    setPhoneData(phoneData);
   }, []);
   return (
     <Router history={history}>
