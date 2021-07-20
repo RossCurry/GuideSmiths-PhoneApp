@@ -27,13 +27,11 @@ const MenuModal = ({ menuAnimation, handleBurgerMenu, isMenu }) => {
     }
   }, [isMenu])
   return (
-    <span className="MenuModal__hidden">
       <menu className={menuClass} style={{animation: menuAnimation}}>
         <MenuItem title="Add New Model" route="/mobile/new" handleBurgerMenu={handleBurgerMenu} icon="+"/>
         <MenuItem title="Edit Model" route="/mobile/edit" handleBurgerMenu={handleBurgerMenu} icon="*"/>
         <MenuItem title="Favourites" route="/mobile/favorites" handleBurgerMenu={handleBurgerMenu} icon="<3"/>
       </menu>
-    </span>
   );
 }
 
