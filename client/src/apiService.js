@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+import data from './mockData/seedData.json';
 const { REACT_APP_API_URL } = process.env;
 const BASE_URL = REACT_APP_API_URL;
 console.log('BASE_URL', BASE_URL);
@@ -6,16 +7,19 @@ console.log('BASE_URL', BASE_URL);
 //Endpoints
 // router.get('/', getPhoneData);
 export const fetchAllPhoneData = async () => {
-  const endpoint = '/';
-  return fetch(BASE_URL+endpoint, {
-    method: 'GET',
-    mode: 'cors',
-    credentials: 'include',
-  })
-  .then(res => res.json())
-  .then(data => {
-    return data;
+  return new Promise((res) => {
+    return res(data);
   });
+  // const endpoint = '/';
+  // return fetch(BASE_URL+endpoint, {
+  //   method: 'GET',
+  //   mode: 'cors',
+  //   credentials: 'include',
+  // })
+  // .then(res => res.json())
+  // .then(data => {
+  //   return data;
+  // });
 }
 
 // router.post('/mobile/create', addPhoneData);
