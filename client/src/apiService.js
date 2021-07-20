@@ -1,4 +1,6 @@
-const BASE_URL = 'http://localhost:3000';
+/* eslint-disable no-undef */
+const { REACT_APP_API_URL } = process.env;
+const BASE_URL = REACT_APP_API_URL;
 
 //Endpoints
 // router.get('/', getPhoneData);
