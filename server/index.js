@@ -17,5 +17,5 @@ app.use(express.json());
 app.use(router);
 
 app.listen(() => {
-  console.log(`Example app listening at ${process.env.SV_URL}🚀`)
+  console.log(`Example app listening at ${process.env.SV_URL} at PORT ${process.env.PORT}🚀`)
 })
