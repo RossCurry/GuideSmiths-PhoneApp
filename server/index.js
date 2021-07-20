@@ -16,6 +16,6 @@ app.use(cors({
 app.use(express.json());
 app.use(router);
 
-app.listen(() => {
+app.listen(process.env.PORT, () => {
   console.log(`Example app listening at ${process.env.SV_URL} at PORT ${process.env.PORT}🚀`)
 })
