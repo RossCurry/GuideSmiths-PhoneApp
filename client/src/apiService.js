@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const { REACT_APP_API_URL } = process.env;
 const BASE_URL = REACT_APP_API_URL;
-
+console.log('BASE_URL', BASE_URL);
 //Endpoints
 // router.get('/', getPhoneData);
 export const fetchAllPhoneData = async () => {
