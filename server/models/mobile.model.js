@@ -1,4 +1,5 @@
 const { Mobile } = require('./Schemas/mobile.schema');
+const { sequelize } = require('./index');
 
 const fetchAllPhoneData = async () => {
   try {
@@ -50,5 +51,6 @@ const queryById = async (id) => {
     console.error(`error finding mobile with id: ${id}`, error);
   }
 }
+
 
 module.exports = { addOneMobileToDB, fetchAllPhoneData, updatePhoneinDatabase, deletePhoneinDatabase };

@@ -7,7 +7,7 @@ const router = require('./router');
 const cors = require('cors')
 
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: process.env.CLIENT_ORIGIN,
   credentials: true
 }));
 app.use(express.json());

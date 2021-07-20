@@ -1,0 +1,90 @@
+[
+  {
+    "name": "iPhone 11",
+    "manufacturer": "Apple",
+    "description": "lorem ipsum dolor sit amet consectetur.",
+    "color": "black",
+    "price": 1069,
+    "imageFileName": "https://www.iphonelife.com/sites/iphonelife.com/files/styles/medium_width_breakpoints_theme_newmango_mobile_2x/public/iphone_11_pro_1.jpg?itok=CcfUz0WB",
+    "screen": "4,7 inch IPS",
+    "processor": "A10 Fusion",
+    "ram": 2
+  },
+  {
+    "name": "iPhone 9",
+    "manufacturer": "Apple",
+    "description": "lorem ipsum dolor sit amet consectetur.",
+    "color": "black",
+    "price": 800,
+    "imageFileName": "https://www.iphonelife.com/sites/iphonelife.com/files/styles/full_width_wide_2x/public/l_10168685_001.jpg?itok=U5J_7rFM",
+    "screen": "4,7 inch IPS",
+    "processor": "A10 Fusion",
+    "ram": 2
+  },
+  {
+    "name": "iPhone 8",
+    "manufacturer": "Apple",
+    "description": "lorem ipsum dolor sit amet consectetur.",
+    "color": "black",
+    "price": 750,
+    "imageFileName": "https://www.iphonelife.com/sites/iphonelife.com/files/styles/full_width_wide_2x/public/screenshot-2017-09-13-at-03.21.30.png?itok=2E4QfgGP",
+    "screen": "4,7 inch IPS",
+    "processor": "A10 Fusion",
+    "ram": 2
+  },
+  {
+    "name": "iPhone 7",
+    "manufacturer": "Apple",
+    "description": "lorem ipsum dolor sit amet consectetur.",
+    "color": "black",
+    "price": 400,
+    "imageFileName": "https://www.iphonelife.com/sites/iphonelife.com/files/styles/full_width_wide_2x/public/iPhone7Plus-JetBlk-34BR_iPhone7-JetBlk-34L_PR-PRINT%202.jpg?itok=HLcEgsjB",
+    "screen": "4,7 inch IPS",
+    "processor": "A10 Fusion",
+    "ram": 2
+  },
+  {
+    "name": "iPhone 10",
+    "manufacturer": "Apple",
+    "description": "lorem ipsum dolor sit amet consectetur.",
+    "color": "orange",
+    "price": 986,
+    "imageFileName": "https://www.iphonelife.com/sites/iphonelife.com/files/styles/full_width_wide_2x/public/screen_shot_2018-10-15_at_8.42.56_am.png?itok=o1MZsiAC",
+    "screen": "4,7 inch IPS",
+    "processor": "A10 Fusion",
+    "ram": 2
+  },
+  {
+    "name": "Galaxy S21 5G",
+    "manufacturer": "Samsung",
+    "description": "blah blah blah blah",
+    "color": "silver",
+    "price": 550,
+    "imageFileName": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSUB00_RXCUi3wKA-GPICF7FAhEac4AgFS1647n5bqjEuVzfFxi-g&usqp=CAc",
+    "screen": "4,5\"",
+    "processor": "Fast",
+    "ram": 3
+  },
+  {
+    "name": "Galaxy S5",
+    "manufacturer": "Samsung",
+    "description": "blah blah blah blah",
+    "color": "Gold",
+    "price": 105,
+    "imageFileName": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQK9PdK9RjFqkH-FSSBSlfeNYvxAvpAmKtgAYtw5OZTQSm5p5z3reY&usqp=CAc",
+    "screen": "4,5\"",
+    "processor": "Slow",
+    "ram": 1
+  },
+  {
+    "name": "Galaxy A32",
+    "manufacturer": "Samsung",
+    "description": "deiji ijedie blah blah",
+    "color": "gold",
+    "price": 219,
+    "imageFileName": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQP6SmQ4ch1FnML2nUSDkt1GFixQpt1tHOfjgXLgljrvxrgbNNDuA&usqp=CAc",
+    "screen": "6.4\"",
+    "processor": "Slow",
+    "ram": 2
+  }
+]
