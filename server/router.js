@@ -1,16 +1,16 @@
 const router = require('express').Router();
 const { getPhoneData, addPhoneData, updatePhoneData, deletePhoneData } = require('./controller/phoneControllers');
-const { mockData } = require('./mockData/seedData.json');
+// const { mockData } = require('./mockData/seedData.json');
 
-router.get('/', sendMockData, getPhoneData);
+router.get('/', getPhoneData);
 router.post('/mobile/create', addPhoneData);
 router.put('/mobile/update/:id', updatePhoneData);
 router.delete('/mobile/delete/:id', deletePhoneData);
 
-const sendMockData = (req, res, next) => {
-  res.send(mockData);
-  next();
-}
+// const sendMockData = (req, res, next) => {
+//   res.send(mockData);
+//   next();
+// }
 
 
 module.exports = router;
