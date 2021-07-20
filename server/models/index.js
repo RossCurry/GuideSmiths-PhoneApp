@@ -4,9 +4,13 @@ let sequelize;
 
 if (process.env.DATABASE_URL) {
   sequelize = new Sequelize(process.env.DATABASE_URL, {
+    use_env_variable: "DATABASE_URL",
     dialect:  'postgres',
     protocol: 'postgres',
-    use_env_variable: "DATABASE_URL"
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
   })
   
 } else {
