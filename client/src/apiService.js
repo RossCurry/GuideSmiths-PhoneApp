@@ -9,7 +9,8 @@ export const fetchAllPhoneData = async () => {
   const endpoint = '/';
   return fetch(BASE_URL+endpoint, {
     method: 'GET',
-
+    mode: 'cors',
+    credentials: 'include',
   })
   .then(res => res.json())
   .then(data => {
