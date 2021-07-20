@@ -191,31 +191,31 @@
 
 @keyframes fadeInModal {
   from {
-    opacity: 50%;
+    opacity: 0.5;
     transform: translateY(50%);
   }
   to {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(0);
   }
 }
 @keyframes fadeInModalInfo {
   from {
-    opacity: 0%;
+    opacity: 0;
     transform: translateY(50%);
   }
   to {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(0);
   }
 }
 @keyframes fadeOutModal {
   from {
-    opacity: 100%;
+    opacity: 1;
     transform: translateY(0);
   }
   to {
-    opacity: 0%;
+    opacity: 1;
     transform: translateY(100%);
   }
 }
