@@ -1,18 +1,26 @@
 /* eslint-disable no-undef */
 const Sequelize = require('sequelize');
-// const sequelize = new Sequelize(`${process.env.DB_NAME}`, `${process.env.DB_USERNAME}`, `${process.env.DB_PASSWORD}`, {
-const sequelize = new Sequelize(`${process.env.DATABASE_URL}`, {
-  host: process.env.DB_HOST,
-  dialect: 'postgres',
+let sequelize;
 
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  },
-});
-
+if (process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
+    dialect:  'postgres',
+    protocol: 'postgres'
+  })
+  
+} else {
+  sequelize = new Sequelize(`${process.env.DB_NAME}`, `${process.env.DB_USERNAME}`, `${process.env.DB_PASSWORD}`, {
+    host: localhost,
+    dialect: 'postgres',
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    },
+  });
+}
+  
 sequelize
   .authenticate()
   .then(() => {
