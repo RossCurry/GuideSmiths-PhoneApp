@@ -8,7 +8,7 @@ const cors = require('cors')
 
 app.use(cors({
   // origin: "*",
-  origin: 'https://guidesmith-client.herokuapp.com/',
+  origin: 'https://guidesmith-client.herokuapp.com',
   methods: ['GET', 'PUT', 'DELETE', 'POST'],
   credentials: true,
   // preflightContinue: true,
