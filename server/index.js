@@ -7,7 +7,7 @@ const router = require('./router');
 const cors = require('cors')
 
 app.use(cors({
-  origin: '*'
+  origin: 'https://guidesmith-client.herokuapp.com/'
 }));
 app.use(express.json());
 app.use(router);
