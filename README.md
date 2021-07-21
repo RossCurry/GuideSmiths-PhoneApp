@@ -38,11 +38,15 @@ To install dependencies for both apps, from the root folder run:
 
 From the root folder
 
-`cd ./server && yarn start`
+    cd ./server
+
+    yarn start
 
 <strong>start client</strong>
 
-`cd ./client && yarn start`
+    cd ./client
+
+    yarn start
 
 ### environment variables
 
