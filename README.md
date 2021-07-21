@@ -44,7 +44,7 @@ From the root folder
 
 `cd ./client && yarn start`
 
-#### environment variables
+### environment variables
 
 You will find a `.env.example` file with the necessary variables you will need to change in each app.
 
@@ -55,4 +55,5 @@ Here are some of the ideas I had to improve the App but with not enough time to 
 * Add a favourite list
 * Frontend ability to edit individual elements of a phone ( endpoint exists )
 * Add a search list
-* make design more roboust 
+* Make design more roboust 
+* Add testing (Jest / Cypress)
