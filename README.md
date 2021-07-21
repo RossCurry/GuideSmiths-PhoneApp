@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Guidesmith Fullstack Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## about
 
-In the project directory, you can run:
+This is a fullstack <strong>Phone-Catalog App</strong> buiilt using React with Express & Sequelize on the backend. It was made over the course of 4 days as a technical assignment. 
 
-### `yarn start`
+The Frontend was built with mobile first in mind but it responsive across multiple browser widths. The REST API includes  `GET`, `CREATE` & `DELETE` endpoints connecting to a SQL database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<strong>TRY IT!</strong> I have deployed the app on [HEROKU](https://guidesmith-client.herokuapp.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### screen shots
 
-### `yarn test`
+<img src="https://i.imgur.com/9v26WQt.png" alt="web view" width="400" style="margin-right: 100px"/>
+<img src="https://i.imgur.com/XBnDwbx.png" alt="mobile view" width="100" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## getting started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is <strong>monorepo</strong> containing both the <strong>client</strong> and <strong>server</strong> apps. The project was created using `node 14.x`.
+It uses a <strong>`postgres`</strong> database in the backend.
+You will need to have a postgres setup running on your machine. In case you don't have one already you can follow these instuctions:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[install postgres using homebrew](https://formulae.brew.sh/formula/postgresql)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### clone this repo
 
-### `yarn eject`
+`https://github.com/RossCurry/GuideSmiths-PhoneApp.git`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### install dependencies
+To install dependencies for both apps, from the root folder run: 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`yarn`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### run the apps
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<strong>start server</strong>
 
-## Learn More
+From the root folder
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`cd ./server && yarn start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<strong>start client</strong>
 
-### Code Splitting
+`cd ./client && yarn start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### environment variables
 
-### Analyzing the Bundle Size
+You will find a `.env.example` file with the necessary variables you will need to change in each app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Improvements
 
-### Making a Progressive Web App
+Here are some of the ideas I had to improve the App but with not enough time to complete them.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Add a favourite list
+* Frontend ability to edit individual elements of a phone ( endpoint exists )
+* Add a search list
+* make design more roboust 
