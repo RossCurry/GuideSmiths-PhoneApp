@@ -1,5 +1,4 @@
 const { Mobile } = require('./Schemas/mobile.schema');
-const { sequelize } = require('./index');
 
 const fetchAllPhoneData = async () => {
   try {
