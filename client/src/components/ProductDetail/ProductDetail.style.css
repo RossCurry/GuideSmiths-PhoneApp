@@ -12,8 +12,12 @@
   margin-bottom: 2rem;
 }
 
+.ProductDetail__container aside a {
+  padding: 1em;
+}
+
 .ProductDetail__container img {
-  max-width: 80%;
+  max-width: 60%;
   justify-self: center;
 }
 
