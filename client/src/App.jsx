@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header.components';
 import './App.css';
+import './GlobalVariables.css';
 import { fetchAllPhoneData } from './apiService';
 import Thumbnail from './components/Thumbnail/Thumbnail.component';
 import Browser from './components/Browser/Browser.component';

@@ -48,6 +48,10 @@ From the root folder
 
 You will find a `.env.example` file with the necessary variables you will need to change in each app.
 
+### mockData
+
+You can find a `mockData` file in the `client/src` folder. You can use that to manually add versions to help play with the app, or of course, create you own.
+
 ## Future Improvements
 
 Here are some of the ideas I had to improve the App but with not enough time to complete them.

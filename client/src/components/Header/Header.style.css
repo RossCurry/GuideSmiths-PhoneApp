@@ -1,7 +1,3 @@
-:root {
-  --header-height: 10vh;
-}
-
 header {
   height: var(--header-height);
   margin: 0 0 2rem 0;

@@ -1,8 +1,3 @@
-:root {
-  --burger-line-height: 10px;
-  --burger-line-width: 30px;
-}
-
 .BurgerMenu__button {
   border: none;
   background: none;

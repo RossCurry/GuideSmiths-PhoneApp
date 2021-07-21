@@ -1,0 +1,12 @@
+:root {
+  --burger-line-height: 10px;
+  --burger-line-width: 30px; 
+  --header-height: 10vh;
+  --guidesmith-purple: rgb(193, 47, 137);
+  --guidesmith-purple-light: hsla(323, 20%, 47%, 0.479);
+  --color-tab-width: 25px;
+  --button-color: rgb(50, 50, 50);
+  --text-color-dark: rgb(50, 50, 50);
+  --button-color-light: rgb(139, 138, 138);
+  --button-color-action: rgb(212, 78, 78);
+}
