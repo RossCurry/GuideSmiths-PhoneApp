@@ -19,7 +19,7 @@ const ProductDetail = ({ product }) => {
   }, [product])
   return (
     <main className="ProductDetail__container">
-      <aside><Link onClick={() => history.goBack()}>Browse</Link> {">"} {product.name}</aside>
+      <aside><Link onClick={() => history.push('/')}>Browse</Link> {">"} {product.name}</aside>
       <img src={product.imageFileName} alt={product.description} />
       <span className="ProductDetail__color-info">
         <span className="ProductDetail__color">{product.color}</span>
